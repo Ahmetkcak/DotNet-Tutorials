@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticSearchIntegration", "ElasticSearchIntegration\ElasticSearchIntegration.csproj", "{00FA81EB-497C-4C6F-8184-5D47D8AE60DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticSearchIntegration", "ElasticSearchIntegration\ElasticSearchIntegration.csproj", "{00FA81EB-497C-4C6F-8184-5D47D8AE60DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreIdentityImplementation", "EFCoreIdentityImplementation\EFCoreIdentityImplementation.csproj", "{267A9BE6-910A-447B-BFA9-2226DA979DAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{00FA81EB-497C-4C6F-8184-5D47D8AE60DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00FA81EB-497C-4C6F-8184-5D47D8AE60DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00FA81EB-497C-4C6F-8184-5D47D8AE60DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{267A9BE6-910A-447B-BFA9-2226DA979DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267A9BE6-910A-447B-BFA9-2226DA979DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267A9BE6-910A-447B-BFA9-2226DA979DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267A9BE6-910A-447B-BFA9-2226DA979DAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
