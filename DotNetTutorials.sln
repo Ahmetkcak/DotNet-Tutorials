@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticSearchIntegration", "ElasticSearchIntegration\ElasticSearchIntegration.csproj", "{00FA81EB-497C-4C6F-8184-5D47D8AE60DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreIdentityImplementation", "EFCoreIdentityImplementation\EFCoreIdentityImplementation.csproj", "{267A9BE6-910A-447B-BFA9-2226DA979DAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreIdentityImplementation", "EFCoreIdentityImplementation\EFCoreIdentityImplementation.csproj", "{267A9BE6-910A-447B-BFA9-2226DA979DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangfireDemo", "HangfireDemo\HangfireDemo.csproj", "{EF9AFB1C-F2F1-48B2-847C-894C25D65AE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{267A9BE6-910A-447B-BFA9-2226DA979DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{267A9BE6-910A-447B-BFA9-2226DA979DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{267A9BE6-910A-447B-BFA9-2226DA979DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF9AFB1C-F2F1-48B2-847C-894C25D65AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9AFB1C-F2F1-48B2-847C-894C25D65AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9AFB1C-F2F1-48B2-847C-894C25D65AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9AFB1C-F2F1-48B2-847C-894C25D65AE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
