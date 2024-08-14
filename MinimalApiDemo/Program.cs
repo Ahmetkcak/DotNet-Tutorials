@@ -85,42 +85,46 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.UseHttpsRedirection();
 
-#region Authentication
-app.MapPost("/Register", async (IAccountService accountService, RegisterDTO request) =>
+
+var authenticationGroup = app.MapGroup("/Authentication");
+authenticationGroup.MapPost("/Register", async (IAccountService accountService, RegisterDTO request) =>
 {
     return Results.Ok(await accountService.Register(request));
 }).WithTags("Authentication").AllowAnonymous();
-app.MapPost("/Login", async (IAccountService accountService, LoginDTO request) =>
+authenticationGroup.MapPost("/Login", async (IAccountService accountService, LoginDTO request) =>
 {
     return Results.Ok(await accountService.Login(request));
 }).WithTags("Authentication").AllowAnonymous();
-#endregion
 
-#region Product
-app.MapGet("/GetProduct", async (IProductService productService) =>
+
+var productGroup = app.MapGroup("/Product");
+productGroup.MapGet("/GetProduct", async (IProductService productService) =>
 {
     return Results.Ok(await productService.GetAll());
-}).WithTags("Product").RequireAuthorization();
+})
+    .WithTags("Product")
+    .RequireAuthorization()
+    .Produces<List<ResponseDto>>(StatusCodes.Status200OK);
 
-app.MapGet("/GetProduct/{id:int}", async (IProductService productService, int id) =>
+productGroup.MapGet("/GetProduct/{id:int}", async (IProductService productService, int id) =>
 {
     return Results.Ok(await productService.GetById(id));
 }).WithTags("Product").RequireAuthorization();
 
-app.MapPost("/AddProduct", async (IProductService productService, AddRequestDTO request) =>
+productGroup.MapPost("/AddProduct", async (IProductService productService, AddRequestDTO request) =>
 {
     return Results.Ok(await productService.Add(request));
 }).WithTags("Product").RequireAuthorization();
 
-app.MapPut("/UpdateProduct", async (IProductService productService, UpdateRequestDTO request) =>
+productGroup.MapPut("/UpdateProduct", async (IProductService productService, UpdateRequestDTO request) =>
 {
     return Results.Ok(await productService.Update(request));
 }).WithTags("Product").RequireAuthorization();
 
-app.MapDelete("/DeleteProduct/{id:int}", async (IProductService productService, int id) =>
+productGroup.MapDelete("/DeleteProduct/{id:int}", async (IProductService productService, int id) =>
 {
     return Results.Ok(await productService.Delete(id));
 }).WithTags("Product").RequireAuthorization();
-#endregion
+
 
 app.Run();
